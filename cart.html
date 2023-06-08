@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="/Assets/logo.png" />
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cart.css">
+    <title>Cart</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header id="home">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#Featuredproduct">Featured Product</a>
+            <a href="index.html#ourproducts">Our Products</a>
+            <a href="#" onclick="loginAnchor()">Login</a>
+            <span id="cart-name" style="align-self: right;">
+                <a href="cart.html" id="cart-value">Cart:0</a>
+            </span>
+        </nav>
+    </header>
+    <div class="body">
+
+        <!-- body -->
+        <div id="login-page">
+
+            <span class="login" id="login">Login</span>
+
+            <input type="email" name="email" id="inputMail" class="input" required placeholder="Enter Email address."
+                onblur="checkRequired()">
+
+            <input type="password" name="password" id="inputPass" class="input" required
+                placeholder="Enter your password." onblur="checkRequired()">
+
+            <p style="display: none; color: red;">Please fill all the required fields.</p>
+
+            <button type="submit" class="login-btn" onclick="saveLogintolocal()">LOGIN</button>
+
+        </div>
+
+        <h2>Cart</h2>
+
+        <div id="cart">
+            <div class="cart-title-wrapper">
+                <div class="cart-body">
+                    <h4>Products</h4>
+                </div>
+                <div class="cart-quantity">
+                    <h4>Quantity</h4>
+                </div>
+                <div class="cart-price">
+                    <h4>Price</h4>
+                </div>
+                <div class="subtotal">
+                    <h4>Total</h4>
+                </div>
+            </div>
+            <div id="cart-body-wrapper"></div>
+        </div>
+
+        <div class="total-price-div">
+
+            <h3>Total: <span id="total-price">0</span></h3>
+
+        </div>
+
+        <div class="bton">
+
+            <button onclick="checkout()" id="checkout-btn">Check out</button>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+
+        <div class="content">
+
+            <div>Whatsapp</div>
+
+            <div>03444444</div>
+
+            <div>Bahadrabad</div>
+
+        </div>
+        <div class="copywright">&copy;All Rights Reserved </div>
+    </footer>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script> -->
+
+    <script src="cart.js"></script>
+</body>
+
+</html>
